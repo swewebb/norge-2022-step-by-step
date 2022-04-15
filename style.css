@@ -1,0 +1,65 @@
+/* Global Settings */
+
+:root {
+  --clr-red: #f65058;
+  --clr-blue: #3f4a75;
+  --clr-white: #ffffff;
+  --clr-black: #2e3440;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: var(--clr-black);
+}
+
+/* Global Layout */
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr;
+
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 800px) {
+  .layout {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 7fr;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  .header,
+  .footer {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Header */
+
+.header {
+  background-color: peachpuff;
+}
+
+/* Global Navigation */
+
+.globalnav {
+  background-color: hotpink;
+}
+
+/* Content */
+
+.content {
+  background-color: yellowgreen;
+}
+
+/* Footer */
+
+.footer {
+  background-color: aquamarine;
+}
